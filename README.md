@@ -30,4 +30,37 @@ sudo update-locale LANG=zh_CN.UTF-8
 sudo apt-get install fonts-wqy-zenhei
 重新启动你的会话或者系统，以确保所有的设置生效。
 
-以上步骤可以帮助你在Ubuntu系统中设置中文环境，包括语言和字符集。如果你需要在特定的程序中导入中文，可能还需要设置程序的语言选项或者确保程序支持UTF-8编码。
+变量	含义
+LC_CTYPE：	语言符号及其分类
+LC_NUMERIC：	数字
+LC_TIME：	时间显示格式
+LC_COLLATE：	比较和排序习惯
+LC_MONETARY：	货币单位
+LC_MESSAGES：	信息，如提示信息、错误信息、状态信息、标题、标签、按钮和菜单等
+LC_PAPER：	默认纸张大小
+LC_NAME：	姓名书写方式
+LC_ADDRESS：	地址书写方式
+LC_TELEPHONE：	电话号码书写方式
+LC_MEASUREMENT：	度量衡表达方式
+LC_IDENTIFICATION：	locale 对自身包含信息的概述
+————————————————
+
+
+
+1.修改 /etc/profile 文件
+在 /etc/profile 文件代码的最后添加定义环境变量的语句，然后执行 sudo source /etc/profile 后注销生效。如：
+
+sudo vim /etc/profile
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:zh
+1
+2
+3
+这种方法比较可靠，因为这个环境变量的调用发生在系统启用的最后阶段。
+————————————————
+
+                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+                        
+原文链接：https://blog.csdn.net/ymz641/article/details/131607024
+
+q1:出现乱码，而且有一部分文字能够输入，实际上是因为输入的vimrc有部分设定导致的。
