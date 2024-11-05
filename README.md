@@ -1,5 +1,24 @@
 source每次都要重启吗
 
+linux配置文件执行顺序为：
+
+/etc/profile→ (~/.bash_profile | ~/.bash_login | ~/.profile)→ ~/.bashrc →/etc/bashrc → ~/.bash_logout
+
+
+因此我们在将.bash_profile文件中加入source ~/.bashrc命令：操作如下
+
+###终端进入.bash_profile文件: 
+vi ~/.bash_profile
+
+###在.bash_profile文件最末尾上加入:
+if [ -f ~/.bashrc ]; then
+source ~/.bashrc
+fi
+
+##保存
+ESC + :wq
+###########################################################3
+
 中文导入下载中文包，部分已经无法下载了，下面是一个可用的。
 
 ubuntu 导入中文
