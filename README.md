@@ -1,3 +1,7 @@
+https://github.com/DamionGans/ubuntu-wsl2-systemd-script/issues/37
+脚本和systemd 
+
+
 解决ubuntu依赖问题：
 解决方法：在终端输入 lsb_release -a 
 ![image](https://github.com/user-attachments/assets/088cdfa2-210d-4ee5-93f9-f81a27db4dae)
