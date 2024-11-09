@@ -1,3 +1,14 @@
+解决ubuntu依赖问题：
+解决方法：在终端输入 lsb_release -a 
+![image](https://github.com/user-attachments/assets/088cdfa2-210d-4ee5-93f9-f81a27db4dae)
+
+查看系统版本最后一行是系统版本 focal说明换源使用的不管是清华源，阿里源，还是中科院的源，
+都要是focal版本的，不然会出现无法安装包的问题度娘直接搜想使用的相关版本的源即可比如我的是focal 版本，
+想用清华源
+在终端输入sudo edit /etc/apt/sources.list进入安装源界面，将里面的文字删掉把下面这段复制填充进去即可
+
+
+
 source每次都要重启吗
 
 linux配置文件执行顺序为：
