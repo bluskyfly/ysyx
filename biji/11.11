@@ -1,1 +1,4 @@
+ps:process state   ps axo stat,ppid,pid,comm 可以查看进程        top可以动态查看进程
 
+wsl   文件设置
+https://learn.microsoft.com/zh-cn/windows/wsl/wsl-config
