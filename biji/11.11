@@ -15,7 +15,7 @@ ping 8.8.8.8    unreachable
 ，所以只需要打开windows子系统选项和虚拟机平台即可。还有一个虚拟机监控平台不知道是干嘛的
 
 当时并不知道，于是下载了hyper-v,代码如见hyper-v.cmd，结果是：下载了不能卸载了 ？？？   
-
+https://github.com/bluskyfly/ysyx/blob/main/biji/tu1.png
 不过主要可能是具体的代码原理不清楚 ？
 
 下载之后想要挂载虚拟机，结果根本不行     想要创建交换机，也不行。    感觉是教程太早了，而且官方的解答不管用
