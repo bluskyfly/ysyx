@@ -6,7 +6,7 @@ https://learn.microsoft.com/zh-cn/windows/wsl/wsl-config
 确实virtualbox字很小，但是今天调试之后速度并不慢，屏幕闪烁的问题最后通过改变屏幕比例150%解决
 
 今天出现问题无法连接网络，在尝试多种方法后均无效，查出没有建立网卡，可是实际上mirrored模式不需要网卡，不知道具体原因是什么，可能是因为网络变化，可能是bug，也可能是因为下载了virtualbox
-版本信息：ubuntu22.04LTS 之前用不了的是jammy版本，后面是Canonical
+版本信息：ubuntu22.04LTS 之前用不了的是jammy版本，后面是focal
 报错信息依次如下：
 ping baidu.com   resolv文件不存在        当然问题可能主要是网上的信息太多而且和我版本相同的不多
 ping 8.8.8.8    unreachable
