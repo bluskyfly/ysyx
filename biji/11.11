@@ -2,3 +2,25 @@ ps:process state   ps axo stat,ppid,pid,comm 可以查看进程        top可以
 
 wsl   文件设置
 https://learn.microsoft.com/zh-cn/windows/wsl/wsl-config
+
+确实virtualbox字很小，但是今天调试之后速度并不慢，屏幕闪烁的问题最后通过改变屏幕比例150%解决
+
+今天出现问题无法连接网络，在尝试多种方法后均无效，查出没有建立网卡，可是实际上mirrored模式不需要网卡，不知道具体原因是什么，可能是因为网络变化，可能是bug，也可能是因为下载了virtualbox
+版本信息：ubuntu22.04LTS 之前用不了的是jammy版本，后面是Canonical
+报错信息依次如下：
+ping baidu.com   resolv文件不存在        当然问题可能主要是网上的信息太多而且和我版本相同的不多
+ping 8.8.8.8    unreachable
+之后尝试了加入文件，配置namesever,改。wslconfig  对了，这个文件只有在wsl --shutdown之后才能重新加载
+中途发现win11没有hyper-v，在后面的查询中发现，hyper-v 包含两个部分：上层的管理系统和底层的虚拟机平台，win11把上层的管理系统直接交给wsl,底层的虚拟机平台综合进虚拟机平台
+，所以只需要打开windows子系统选项和虚拟机平台即可。还有一个虚拟机监控平台不知道是干嘛的
+
+当时并不知道，于是下载了hyper-v,代码如见hyper-v.cmd，结果是：下载了不能卸载了 ？？？   
+
+不过主要可能是具体的代码原理不清楚 ？
+
+下载之后想要挂载虚拟机，结果根本不行     想要创建交换机，也不行。    感觉是教程太早了，而且官方的解答不管用
+
+不过确实大部分的有效的答案实际上来自官方，
+
+非官方的解答可能带来其他问题 
+
